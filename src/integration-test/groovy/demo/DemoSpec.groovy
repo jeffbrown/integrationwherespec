@@ -1,4 +1,3 @@
-```
 // src/integration-test/groovy/demo/DemoSpec.groovy
 package demo
 
@@ -10,17 +9,16 @@ import spock.lang.Specification
 class DemoSpec extends Specification {
 
     @Rollback
-	def "test toUpperCase"() {
-		given:
-		def result = value.toUpperCase()
+    def "test toUpperCase"() {
+        given:
+        def result = value.toUpperCase()
 
-		expect:
-		result == expectedResult
+        expect:
+        result == expectedResult
 
-		where:
+        where:
         value          | expectedResult
         'King Crimson' | 'KING CRIMSON'
         'Riverside'    | 'RIVERSIDE'
-	}
+    }
 }
-```
